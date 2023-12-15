@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://stxj53pay85n"
-path="res://.godot/imported/tileset_plains_070419_zp.png-de14c4718ef8ee82bfa0d59c9278be26.ctex"
+uid="uid://bnk2mbx7m6sox"
+path="res://.godot/imported/characters.png-71e65985a77efe7b4b18913c785b67f9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tileset_plains_070419_zp.png"
-dest_files=["res://.godot/imported/tileset_plains_070419_zp.png-de14c4718ef8ee82bfa0d59c9278be26.ctex"]
+source_file="res://assets/characters.png"
+dest_files=["res://.godot/imported/characters.png-71e65985a77efe7b4b18913c785b67f9.ctex"]
 
 [params]
 
