@@ -4984,7 +4984,6 @@ animations = [{
 }]
 
 [node name="LEVEL1" type="Node2D"]
-light_mask = 1048575
 
 [node name="TileMap2" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_bebig")
