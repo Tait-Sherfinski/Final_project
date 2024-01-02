@@ -1,0 +1,87 @@
+[gd_scene load_steps=11 format=3 uid="uid://i7qafia2x6se"]
+
+[ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_fyspu"]
+[ext_resource type="Texture2D" uid="uid://bnk2mbx7m6sox" path="res://assets/characters.png" id="2_a0bag"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lgdgl"]
+size = Vector2(9, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r1q42"]
+atlas = ExtResource("2_a0bag")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pl7tj"]
+atlas = ExtResource("2_a0bag")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4mrd"]
+atlas = ExtResource("2_a0bag")
+region = Rect2(128, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wy5ld"]
+atlas = ExtResource("2_a0bag")
+region = Rect2(416, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pt6lq"]
+atlas = ExtResource("2_a0bag")
+region = Rect2(448, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_52ha7"]
+atlas = ExtResource("2_a0bag")
+region = Rect2(352, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7sosf"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r1q42")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pl7tj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4mrd")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wy5ld")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pt6lq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_52ha7")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(0, -16)
+script = ExtResource("1_fyspu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(-0.5, 10)
+shape = SubResource("RectangleShape2D_lgdgl")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -16)
+zoom = Vector2(7, 7)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 8)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_7sosf")
+animation = &"walk"
+frame_progress = 0.643607

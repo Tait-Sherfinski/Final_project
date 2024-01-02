@@ -1,0 +1,72 @@
+[gd_scene load_steps=10 format=3 uid="uid://cikyv5ifi7jcv"]
+
+[ext_resource type="Script" path="res://RigidBody2D.gd" id="1_24qe7"]
+[ext_resource type="Texture2D" uid="uid://4tiwifrssvsk" path="res://assets/snake spritesheet calciumtrice.png" id="2_bxe4l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ccfk"]
+atlas = ExtResource("2_bxe4l")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i43cs"]
+atlas = ExtResource("2_bxe4l")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tgixu"]
+atlas = ExtResource("2_bxe4l")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ltco3"]
+atlas = ExtResource("2_bxe4l")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qojk3"]
+atlas = ExtResource("2_bxe4l")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c41o1"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ccfk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i43cs")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_tgixu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ltco3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qojk3")
+}],
+"loop": true,
+"name": &"moving",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f4kj6"]
+radius = 2.0
+
+[node name="RigidBody2D" type="RigidBody2D"]
+script = ExtResource("1_24qe7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -5)
+scale = Vector2(0.28125, 0.289063)
+sprite_frames = SubResource("SpriteFrames_c41o1")
+animation = &"moving"
+frame_progress = 0.916925
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_f4kj6")
+
+[node name="Timer" type="Timer" parent="."]
