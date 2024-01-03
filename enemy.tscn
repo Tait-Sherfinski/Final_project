@@ -68,8 +68,8 @@ position = Vector2(0, -4)
 shape = SubResource("CircleShape2D_sd4ji")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -12)
-scale = Vector2(0.8125, 0.71875)
+position = Vector2(0, -13.25)
+scale = Vector2(0.875, 0.796875)
 sprite_frames = SubResource("SpriteFrames_46p54")
 animation = &"moving"
 frame = 3
