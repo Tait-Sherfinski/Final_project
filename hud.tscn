@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bu7n3lykwg5s"]
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="Health" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Health_Bar" type="Sprite2D" parent="Health"]
+
+[node name="Stamina" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Stamina_Bar" type="Sprite2D" parent="Stamina"]

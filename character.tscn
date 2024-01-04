@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bnk2mbx7m6sox" path="res://assets/characters.png" id="2_a0bag"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lgdgl"]
-size = Vector2(9, 12)
+size = Vector2(18, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r1q42"]
 atlas = ExtResource("2_a0bag")
@@ -72,16 +72,15 @@ script = ExtResource("1_fyspu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
-position = Vector2(-0.5, 10)
+position = Vector2(-1, 4)
 shape = SubResource("RectangleShape2D_lgdgl")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(0, -8)
-zoom = Vector2(6, 6)
+position = Vector2(0, -16)
+zoom = Vector2(5, 5)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, 8)
-scale = Vector2(0.5, 0.5)
+position = Vector2(-4.76837e-07, -4.76837e-07)
 sprite_frames = SubResource("SpriteFrames_7sosf")
 animation = &"walk"
 frame_progress = 0.643607

@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://4tiwifrssvsk" path="res://assets/snake spritesheet calciumtrice.png" id="1_1cv2h"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_sd4ji"]
-radius = 5.0
+radius = 8.06226
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p6rgs"]
 atlas = ExtResource("1_1cv2h")
@@ -64,12 +64,12 @@ animations = [{
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
-position = Vector2(0, -4)
+position = Vector2(-1, -5)
 shape = SubResource("CircleShape2D_sd4ji")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -13.25)
-scale = Vector2(0.875, 0.796875)
+position = Vector2(-1.19209e-07, -16)
+scale = Vector2(1.28906, 1.03125)
 sprite_frames = SubResource("SpriteFrames_46p54")
 animation = &"moving"
 frame = 3
