@@ -1,10 +1,18 @@
-[gd_scene load_steps=11 format=3 uid="uid://i7qafia2x6se"]
+[gd_scene load_steps=13 format=3 uid="uid://i7qafia2x6se"]
 
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_fyspu"]
 [ext_resource type="Texture2D" uid="uid://bnk2mbx7m6sox" path="res://assets/characters.png" id="2_a0bag"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lgdgl"]
 size = Vector2(18, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_122ve"]
+atlas = ExtResource("2_a0bag")
+region = Rect2(384, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8gjbr"]
+atlas = ExtResource("2_a0bag")
+region = Rect2(416, 64, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r1q42"]
 atlas = ExtResource("2_a0bag")
@@ -32,6 +40,17 @@ region = Rect2(352, 64, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7sosf"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_122ve")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8gjbr")
+}],
+"loop": true,
+"name": &"attack",
+"speed": 3.0
+}, {
 "frames": [],
 "loop": true,
 "name": &"default",
@@ -82,5 +101,6 @@ zoom = Vector2(5, 5)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-4.76837e-07, -4.76837e-07)
 sprite_frames = SubResource("SpriteFrames_7sosf")
-animation = &"walk"
-frame_progress = 0.643607
+animation = &"attack"
+frame = 1
+frame_progress = 0.370339

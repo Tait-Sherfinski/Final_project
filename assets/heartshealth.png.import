@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clim67gsw4nef"
-path="res://.godot/imported/b8e39e07-58f0-43b3-901d-c9b204f27fd7.png-28a613872a6dd2d2d73023c64ca7aa72.ctex"
+uid="uid://b472d8qp0ytjx"
+path="res://.godot/imported/heartshealth.png-5849b7f672c5fe6e7fdb9278ac6bcc72.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://b8e39e07-58f0-43b3-901d-c9b204f27fd7.png"
-dest_files=["res://.godot/imported/b8e39e07-58f0-43b3-901d-c9b204f27fd7.png-28a613872a6dd2d2d73023c64ca7aa72.ctex"]
+source_file="res://assets/heartshealth.png"
+dest_files=["res://.godot/imported/heartshealth.png-5849b7f672c5fe6e7fdb9278ac6bcc72.ctex"]
 
 [params]
 

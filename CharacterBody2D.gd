@@ -6,10 +6,20 @@ const JUMP_VELOCITY = -175.0
 
 enum STATES { IDLE = 0, DEAD, DAMAGED, ATTACKING}
 
+@export var data = {
+	"max_health": 100.0,
+	"health": 100.0,
+	"stamina": 50.0,
+	"state": STATES.IDLE }
+	
+	
+var inertia = Vector2()
+var look_direction = Vector2.RIGHT
+var attack_direction = Vector2.RIGHT
+
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var gravity_on = true
-
 
 
 func _physics_process(delta):
