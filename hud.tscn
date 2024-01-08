@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://bu7n3lykwg5s"]
+[gd_scene load_steps=4 format=3 uid="uid://bu7n3lykwg5s"]
 
+[ext_resource type="Script" path="res://hud.gd" id="1_2uh4q"]
 [ext_resource type="Texture2D" uid="uid://b472d8qp0ytjx" path="res://assets/heartshealth.png" id="1_7oyli"]
 [ext_resource type="Texture2D" uid="uid://0cq0p8jf6u3u" path="res://assets/rad-rainbow-lifebar.png" id="2_uy20t"]
 
-[node name="HUD" type="CanvasLayer"]
+[node name="HUD" type="CanvasLayer" groups=["Hud"]]
+script = ExtResource("1_2uh4q")
 
 [node name="Health" type="Control" parent="."]
 layout_mode = 3

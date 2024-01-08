@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=3 uid="uid://i7qafia2x6se"]
+[gd_scene load_steps=14 format=3 uid="uid://i7qafia2x6se"]
 
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_fyspu"]
 [ext_resource type="Texture2D" uid="uid://bnk2mbx7m6sox" path="res://assets/characters.png" id="2_a0bag"]
+[ext_resource type="PackedScene" uid="uid://bu7n3lykwg5s" path="res://hud.tscn" id="3_idatr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lgdgl"]
 size = Vector2(18, 24)
@@ -85,7 +86,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" groups=["player"]]
 position = Vector2(0, -16)
 script = ExtResource("1_fyspu")
 
@@ -104,3 +105,5 @@ sprite_frames = SubResource("SpriteFrames_7sosf")
 animation = &"attack"
 frame = 1
 frame_progress = 0.370339
+
+[node name="HUD" parent="." instance=ExtResource("3_idatr")]

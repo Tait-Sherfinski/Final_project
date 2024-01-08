@@ -6,6 +6,7 @@ const JUMP_VELOCITY = -175.0
 
 enum STATES { IDLE = 0, DEAD, DAMAGED, ATTACKING}
 
+@onready var p_HUD = get_tree().get_first_node_in_group("Hud")
 @export var data = {
 	"max_health": 100.0,
 	"health": 100.0,
@@ -13,9 +14,13 @@ enum STATES { IDLE = 0, DEAD, DAMAGED, ATTACKING}
 	"state": STATES.IDLE }
 	
 	
+	
+	
 var inertia = Vector2()
 var look_direction = Vector2.RIGHT
 var attack_direction = Vector2.RIGHT
+
+var slash_scene = preload("res://slash.tscn")
 
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
