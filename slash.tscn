@@ -10,6 +10,7 @@ radius = 8.0
 script = ExtResource("1_jj5ap")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("CircleShape2D_58vse")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

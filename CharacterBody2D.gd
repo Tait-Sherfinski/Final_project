@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 
-const SPEED = 45.0
-const JUMP_VELOCITY = -175.0
+const SPEED = 65.0
+const JUMP_VELOCITY = -200.0
 
 enum STATES { IDLE = 0, DEAD, DAMAGED, ATTACKING}
 
