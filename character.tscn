@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bu7n3lykwg5s" path="res://hud.tscn" id="3_idatr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lgdgl"]
-size = Vector2(18, 24)
+size = Vector2(18, 23)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_122ve"]
 atlas = ExtResource("2_a0bag")
@@ -90,9 +90,9 @@ animations = [{
 position = Vector2(0, -16)
 script = ExtResource("1_fyspu")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Hitbox" type="CollisionShape2D" parent="."]
 visible = false
-position = Vector2(-1, 4)
+position = Vector2(-1, 4.5)
 shape = SubResource("RectangleShape2D_lgdgl")
 
 [node name="Camera2D" type="Camera2D" parent="."]

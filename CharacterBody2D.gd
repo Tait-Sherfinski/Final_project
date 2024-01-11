@@ -50,3 +50,8 @@ func update_animation(direction):
 	if direction != 0:
 		anim.play("walk")
 		anim.flip_h = direction < 0
+
+
+func _on_area_2d_body_entered(body):
+	if body.is_in_group("player"):
+		body.global_position = Vector2(0.5, -3)
