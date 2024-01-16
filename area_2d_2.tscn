@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=3 uid="uid://ok7n0mfkixf"]
+
+[ext_resource type="Texture2D" uid="uid://d0q7o8v6h8r6x" path="res://assets/portalRings1.png" id="1_rs6ek"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iam6w"]
+size = Vector2(27, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ojc1d"]
+atlas = ExtResource("1_rs6ek")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4vfxp"]
+atlas = ExtResource("1_rs6ek")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ki7xn"]
+atlas = ExtResource("1_rs6ek")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bsuvv"]
+atlas = ExtResource("1_rs6ek")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbtr1"]
+atlas = ExtResource("1_rs6ek")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xakta"]
+atlas = ExtResource("1_rs6ek")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1d5pq"]
+atlas = ExtResource("1_rs6ek")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d2mmb"]
+animations = [{
+"frames": [{
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_ojc1d")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_4vfxp")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_ki7xn")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_bsuvv")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_fbtr1")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_xakta")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_1d5pq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Area2D2" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1178.5, 173)
+shape = SubResource("RectangleShape2D_iam6w")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1179, 169)
+scale = Vector2(1.3125, 1.4375)
+sprite_frames = SubResource("SpriteFrames_d2mmb")
+frame = 4
+frame_progress = 0.470041

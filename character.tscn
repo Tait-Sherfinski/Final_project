@@ -90,7 +90,7 @@ animations = [{
 position = Vector2(0, -16)
 script = ExtResource("1_fyspu")
 
-[node name="Hitbox" type="CollisionShape2D" parent="."]
+[node name="Hitbox" type="CollisionShape2D" parent="." groups=["player"]]
 visible = false
 position = Vector2(-1, 4.5)
 shape = SubResource("RectangleShape2D_lgdgl")
