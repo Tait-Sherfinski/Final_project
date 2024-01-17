@@ -60,3 +60,13 @@ func _on_area_2d_body_entered(body):
 func _on_area_2d_2_body_entered(body):
 	if body.is_in_group("player"):
 		get_tree().change_scene_to_file("res://level_2.tscn")
+
+
+func _on_death_box_body_entered(body):
+	if body.is_in_group("player"):
+		body.global_position = Vector2(0.5, -20)
+
+
+func _on_lava_body_entered(body):
+	if body.is_in_group("player"):
+		body.global_position = Vector2(0.5, -20)
