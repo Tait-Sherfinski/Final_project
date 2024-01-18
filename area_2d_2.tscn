@@ -2,9 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://d0q7o8v6h8r6x" path="res://assets/portalRings1.png" id="1_rs6ek"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_iam6w"]
-size = Vector2(27, 38)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_ojc1d"]
 atlas = ExtResource("1_rs6ek")
 region = Rect2(0, 0, 32, 32)
@@ -62,11 +59,10 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Area2D2" type="Area2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iam6w"]
+size = Vector2(27, 38)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1178.5, 173)
-shape = SubResource("RectangleShape2D_iam6w")
+[node name="Area2D2" type="Area2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1179, 169)
@@ -74,3 +70,7 @@ scale = Vector2(1.3125, 1.4375)
 sprite_frames = SubResource("SpriteFrames_d2mmb")
 frame = 4
 frame_progress = 0.470041
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1178.5, 173)
+shape = SubResource("RectangleShape2D_iam6w")
