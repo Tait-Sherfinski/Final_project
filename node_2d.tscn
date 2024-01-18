@@ -3016,7 +3016,6 @@ vframes = 5
 frame = 16
 
 [node name="Label" type="Label" parent="."]
-visible = false
 offset_left = 841.0
 offset_top = -105.0
 offset_right = 970.0

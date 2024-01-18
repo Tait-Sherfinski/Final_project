@@ -78,5 +78,4 @@ func _on_portal_lvl_1_body_entered(body):
 
 
 func _on_treasure_body_entered(body):
-	if body.is_in_group("player"):
-		pass
+	pass
